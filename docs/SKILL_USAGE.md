@@ -5,7 +5,7 @@ The skill should treat this repository as the single uploader implementation.
 ## Stable Executable
 
 ```text
-/Users/shenting/WebstormProjects/oss-asset-upload/.venv/bin/oss-asset-upload
+/Users/shenting/.local/share/codex-tools/oss-asset-upload/.venv/bin/oss-asset-upload
 ```
 
 ## Required Inputs
@@ -20,17 +20,17 @@ The skill should treat this repository as the single uploader implementation.
 For an image in a note:
 
 ```bash
-/Users/shenting/WebstormProjects/oss-asset-upload/.venv/bin/oss-asset-upload upload "$FILE" --slug "$SLUG" --date "$DATE" --output markdown
+/Users/shenting/.local/share/codex-tools/oss-asset-upload/.venv/bin/oss-asset-upload upload "$FILE" --slug "$SLUG" --date "$DATE" --output markdown
 ```
 
 For audio/video where HTML figures are preferred:
 
 ```bash
-/Users/shenting/WebstormProjects/oss-asset-upload/.venv/bin/oss-asset-upload upload "$FILE" --slug "$SLUG" --date "$DATE" --output html
+/Users/shenting/.local/share/codex-tools/oss-asset-upload/.venv/bin/oss-asset-upload upload "$FILE" --slug "$SLUG" --date "$DATE" --output html
 ```
 
 For metadata-driven editing:
 
 ```bash
-/Users/shenting/WebstormProjects/oss-asset-upload/.venv/bin/oss-asset-upload upload "$FILE" --slug "$SLUG" --date "$DATE" --output json
+/Users/shenting/.local/share/codex-tools/oss-asset-upload/.venv/bin/oss-asset-upload upload "$FILE" --slug "$SLUG" --date "$DATE" --output json
 ```

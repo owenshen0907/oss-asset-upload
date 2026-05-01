@@ -7,7 +7,7 @@ The first use case is the `AiTool-content` writing workflow: keep Markdown in Gi
 ## Local Install
 
 ```bash
-cd /Users/shenting/WebstormProjects/oss-asset-upload
+cd /Users/shenting/.local/share/codex-tools/oss-asset-upload
 python3 -m venv .venv
 .venv/bin/python -m pip install --upgrade pip
 .venv/bin/pip install -e '.[dev]'
@@ -19,7 +19,7 @@ Edit `.env` with your OSS credentials and bucket settings.
 The stable local command for Codex skills is:
 
 ```bash
-/Users/shenting/WebstormProjects/oss-asset-upload/.venv/bin/oss-asset-upload
+/Users/shenting/.local/share/codex-tools/oss-asset-upload/.venv/bin/oss-asset-upload
 ```
 
 ## Configuration
@@ -136,7 +136,7 @@ Keep one bucket for public content assets, then use prefixes for organization. D
 A Codex skill should call the local CLI instead of reimplementing OSS upload logic:
 
 ```bash
-/Users/shenting/WebstormProjects/oss-asset-upload/.venv/bin/oss-asset-upload upload "$FILE" --slug "$POST_SLUG" --date "$POST_DATE" --output markdown
+/Users/shenting/.local/share/codex-tools/oss-asset-upload/.venv/bin/oss-asset-upload upload "$FILE" --slug "$POST_SLUG" --date "$POST_DATE" --output markdown
 ```
 
 The skill can then insert the returned Markdown or HTML into `AiTool-content/posts/*.md`.
