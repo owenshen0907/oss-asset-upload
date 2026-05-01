@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "oss-asset-upload"
+version = "0.1.0"
+description = "Small CLI for uploading local content assets to Alibaba Cloud OSS and returning Markdown-ready URLs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "owenshen0907", email = "owenshen123@outlook.com" }
+]
+keywords = ["aliyun", "alibaba-cloud", "oss", "assets", "markdown", "cli"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Utilities"
+]
+dependencies = [
+  "alibabacloud-oss-v2>=1.2.1",
+  "alibabacloud-tea>=0.1.0",
+  "python-dotenv>=1.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/owenshen0907/oss-asset-upload"
+Repository = "https://github.com/owenshen0907/oss-asset-upload"
+Issues = "https://github.com/owenshen0907/oss-asset-upload/issues"
+
+[project.scripts]
+oss-asset-upload = "oss_asset_upload.cli:main"
+oss-upload-asset = "oss_asset_upload.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oss_asset_upload"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
